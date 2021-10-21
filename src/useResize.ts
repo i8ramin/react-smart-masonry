@@ -17,8 +17,8 @@ function getCurrentBreakpoints(breakpoints: Breakpoints, width: number) {
  */
 export default function useResize(breakpoints: Breakpoints) {
   const [state, setState] = useState(() => ({
-    width: window.innerWidth,
-    currentBreakpoints: getCurrentBreakpoints(breakpoints, window.innerWidth),
+    width: global.innerWidth,
+    currentBreakpoints: getCurrentBreakpoints(breakpoints, global.innerWidth),
   }));
 
   useEffect(() => {
